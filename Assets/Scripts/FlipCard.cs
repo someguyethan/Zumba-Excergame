@@ -15,7 +15,7 @@ public class FlipCard : MonoBehaviour, IPointerClickHandler
     // Start is called before the first frame update
     void Start()
     {
-        isFront = true;
+        isFront = false;
     }
 
     // Update is called once per frame
@@ -28,6 +28,12 @@ public class FlipCard : MonoBehaviour, IPointerClickHandler
         else if (!isFront)
         {
             back.SetActive(true);
+        }
+        if (!locked && !back.gameObject.activeInHierarchy)
+        {
+            locked = script.locked;
+            script.count = 0;
+            script.locked = false;
         }
     }
     private void OnMouseDown()

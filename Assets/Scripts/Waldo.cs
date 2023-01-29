@@ -8,6 +8,7 @@ public class Waldo : MonoBehaviour, IPointerClickHandler
     public GameObject target1;
     public GameObject target2;
     public GameObject target3;
+    public int targetCount = 1;
 
     // Start is called before the first frame update
     void Start()

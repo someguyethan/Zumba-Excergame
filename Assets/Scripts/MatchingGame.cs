@@ -20,11 +20,10 @@ public class MatchingGame : MonoBehaviour
     {
         if (count == 2)
         {
-            if (card1 == card2)
+            if (card1.text == card2.text)
             {
                 locked = true;
             }
-            count = 0;
         }
     }
 }
